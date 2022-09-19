@@ -1,7 +1,7 @@
 pipeline {
   agent {
-    node {
-      label 'vm'
+    docker {
+      image 'node:latest'
     }
 
   }
@@ -9,6 +9,7 @@ pipeline {
     stage('Pre-check') {
       steps {
         sh 'cat /etc/os-release'
+        sh 'node --version'
       }
     }
 
