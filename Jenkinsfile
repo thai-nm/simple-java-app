@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'vm'
+    }
+
+  }
   stages {
     stage('Pre-check') {
       steps {
