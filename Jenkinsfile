@@ -2,7 +2,7 @@ pipeline {
   agent {
     docker {
       image 'maven:3-openjdk-11'
-      labels 'vm && docker'
+      label 'vm && docker'
     }
   }
   stages {
