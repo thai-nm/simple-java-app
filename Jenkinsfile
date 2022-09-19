@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'node:latest'
+      image 'maven:3-openjdk-11'
     }
 
   }
@@ -10,8 +10,13 @@ pipeline {
       steps {
         sh 'cat /etc/os-release'
         sh 'node --version'
+        sh 'ls -la'
       }
     }
-
+    stage('Build') {
+      steps {
+        sh 'mvn --version'
+      }
+    }
   }
 }
