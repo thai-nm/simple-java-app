@@ -4,7 +4,4 @@ WORKDIR /app
 
 COPY . . 
 
-RUN javac main.java
-RUN jar --create --file main.jar --main-class main main.class
-
-CMD ["java", "-jar", "main.jar"]
+CMD ["./mvnw", "spring-boot:run"] 
