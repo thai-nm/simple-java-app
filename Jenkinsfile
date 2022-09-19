@@ -3,7 +3,9 @@ pipeline {
     docker {
       image 'maven:3-openjdk-11'
     }
-
+    labels {
+      'vm && docker'
+    }
   }
   stages {
     stage('Pre-check') {
