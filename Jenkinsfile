@@ -9,7 +9,6 @@ pipeline {
     stage('Pre-check') {
       steps {
         sh 'cat /etc/os-release'
-        sh 'node --version'
         sh 'ls -la'
       }
     }
